@@ -1,0 +1,22 @@
+Você precisará instalar o composer. Para isso, basta executar o seguinte comando pelo seu terminal:
+
+curl -sS https://getcomposer.org/installer | php
+Logo que concluír, ainda na mesma janela do terminal, execute:
+
+sudo mv composer.phar /usr/local/bin/composer
+Pronto, você já tem o composer instalado. Agora execute o seguinte comando para instalar o Laravel:
+
+composer global require "laravel/installer=~1.1"
+Quando concluír, você precisará adicionar a seguinte instrução no seu PATH:
+
+export PATH="~/.composer/vendor/bin:$PATH" 
+O composer poderá ser instalado dentro da pasta .config, dependendo da versão que você estiver usando. Neste caso o comando seria export PATH="~/.config/composer/vendor/bin:$PATH"
+Ótimo, com isso concluimos o processo de instalação do Laravel. Agora só falta a extensão mcrypt. Para isso, execute os seguintes comandos:
+
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install php5-json
+sudo apt-get install openssl
+sudo apt-get install php5-mcrypt
+sudo php5enmod mcrypt
+Tudo pronto, agora você já pode começar a utilizar o Laravel.

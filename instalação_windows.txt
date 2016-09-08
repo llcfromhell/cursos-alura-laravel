@@ -1,0 +1,17 @@
+Eu recomendo que você instale o XAMPP, que facilita bastante:
+
+https://www.apachefriends.org/pt_br/download.html
+Aqui tem um link com instruções de como instalar o XAMPP:
+
+http://pt.wikihow.com/Instalar-o-XAMPP-para-Windows
+Você também precisará instalar o composer. Para isso, basta acessar https://getcomposer.org/doc/00-intro.md#installation-windows.
+
+Baixe o instalador pra windows e execute-o (é só dar um next, next, next)
+
+Agora que você baixou o composer, acesse seu cmd e execute o comando:
+
+composer global require "laravel/installer=~1.1"
+Quando concluir, basta adicionar o caminho do laravel no seu PATH:
+
+C:\Users\turini\AppData\Roaming\Composer\vendor\bin
+Tudo pronto, agora você já pode começar a utilizar o Laravel.
