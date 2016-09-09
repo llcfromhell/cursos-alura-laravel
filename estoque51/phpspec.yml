@@ -1,0 +1,5 @@
+suites:
+    main:
+        namespace: estoque51
+        psr4_prefix: estoque51
+        src_path: app
