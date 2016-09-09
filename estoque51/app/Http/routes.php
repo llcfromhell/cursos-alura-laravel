@@ -3,6 +3,7 @@
 /*
 |--------------------------------------------------------------------------
 | Application Routes
+
 |--------------------------------------------------------------------------
 |
 | Here is where you can register all of the routes for an application.
@@ -16,3 +17,5 @@ Route::get('/', function () {
 });
 
 Route::get('/produtos', 'ProdutoController@lista');
+
+Route::get('/produtos/mostra/{id}', 'ProdutoController@mostra');
