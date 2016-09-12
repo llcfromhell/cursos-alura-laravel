@@ -9,7 +9,7 @@ class ProdutoController extends Controller {
 
         $produtos = DB::select('select * from produtos');
 
-        return view('listagem')->with('produtos', $produtos);
+        return view('produto.listagem')->with('produtos', $produtos);
     }
 
     public function mostra(){
@@ -21,8 +21,26 @@ class ProdutoController extends Controller {
         if (empty($produtos)) {
             return "Produto não encontrado";
         } else {
-            return view('detalhes')->with('p', $produtos[0]);
+            return view('produto.detalhes')->with('p', $produtos[0]);
         }
         
+    }
+
+    public function novo() {
+        return view("produto.formulario");
+    }
+
+    public function adicionar() {
+
+        $nome = Request::input("nome");
+        $valor = Request::input("valor");
+        $quantidade = Request::input("quantidade");
+        $descricao = Request::input("descricao");
+
+        //$params = [Request::only("nome","valor","quantidade","descricao")];
+
+        DB::insert('insert into produtos values (null, ?,?,?,?)', array($nome, $valor, $descricao, $quantidade));
+
+        return view("produto.adicionado")->with('nome', $nome);
     }
 }
