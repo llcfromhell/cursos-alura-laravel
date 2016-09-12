@@ -1,0 +1,7 @@
+# comandos para rodar o php server via artisan e responder no public do laravel no c9.io
+
+# descobrir o IP
+ifconfig | grep "inet addr"
+
+# rodar o com o ip encontrado no comando anterior e na porta padrão do c9 (8080)
+php artisan serve --host=172.17.92.25 --port=8080
