@@ -41,17 +41,11 @@ class ProdutoController extends Controller {
 
         DB::insert('insert into produtos values (null, ?,?,?,?)', array($nome, $valor, $descricao, $quantidade));
 
-<<<<<<< HEAD
         return redirect()->action("ProdutoController@lista")->withInput(Request::only('nome'));
     }
     
     public function getProdutos() {
         $produtos = DB::select('select * from produtos');
         return $produtos;
-=======
-        //return view("produto.adicionado")->with('nome', $nome);
-
-        return redirect('/produtos')->withInput();
->>>>>>> 72eb0f49846aeb7ea7cde0fd6c37fe0140d2d795
     }
 }
